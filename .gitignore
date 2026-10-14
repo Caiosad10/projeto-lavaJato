@@ -1,0 +1,23 @@
+# Dependências (recriar com npm install)
+node_modules/
+
+# Build
+dist/
+
+# Dados de execução do servidor de tempo real (semeado do zero ao rodar)
+server/data.json
+
+# Logs e lixo de execução
+devserver.log
+*.log
+npm-debug.log*
+
+# Ambiente (.env com chaves nunca sobe)
+.env
+.env.*
+!.env.example
+
+# Editores / SO
+.vscode/settings.local.json
+.DS_Store
+Thumbs.db

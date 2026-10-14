@@ -1,0 +1,6 @@
+{
+  "name": "LavaJato Online",
+  "description": "Sistema de agendamento online, cardápio de serviços e gestão para lava-jatos e lavadores autônomos com cálculo inteligente de tempo e avaliações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
