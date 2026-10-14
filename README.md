@@ -19,7 +19,7 @@ O **LavaJato Hub** é uma plataforma de agendamento online de lavagem de veícul
 
 O protótipo roda **100% sem banco de dados real**: os dados compartilhados ficam num servidor leve em memória/arquivo local (`server/data.json`), a sessão fica no `localStorage` do navegador e o pagamento é simulado (teatro de demonstração).
 
-## Arquitetura em 30 segundos
+## Arquitetura
 
 | Camada | Tecnologia | Papel |
 |---|---|---|
@@ -52,7 +52,7 @@ npm run dev
 - **Web:** http://localhost:3000/
 - **API de tempo real:** http://localhost:3010 (SSE em `/api/events`)
 
-### Testar o tempo real (2 aparelhos, mesmo Wi-Fi)
+### Testar o tempo real (2 aparelhos, mesma rede (Wi-Fi))
 
 1. Notebook: `npm run dev` → abra `http://<IP-da-máquina>:3000/` → entre como **EcoWash** (loja).
 2. Celular: abra `http://<IP-da-máquina>:3000/` → entre como **Sérgio Filho** (cliente).
@@ -108,25 +108,15 @@ Ou crie uma conta nova pelo próprio app (cadastro de cliente ou prestador).
 - **Navegador:** `localStorage.clear()` no console (F12).
 - **Servidor:** pare o `npm run dev`, apague `server/data.json` (no próximo start ele é recriado do zero).
 
-## Deploy estático (Netlify)
-
-Para publicar sem backend (modo local, dados por navegador):
-
-```bash
-npm run build   # gera dist/ limpa a cada execução
-```
-
-Arraste a pasta `dist/` em [app.netlify.com/drop](https://app.netlify.com/drop), ou conecte o repositório com build command `npm run build` e publish directory `dist`. O tempo real (SSE) não roda no Netlify — o app cai automaticamente no modo local.
-
 ## Documentação do projeto
 
 - [`project_memory.md`](project_memory.md) — contexto, decisões de produto e fluxos
 - [`new_implement.md`](new_implement.md) — backlog de melhorias e pontos observados
 
-## Contribuindo
+## Como contribuir?
 
-1. Crie uma branch: `git checkout -b minha-feature`
+1. Crie uma branch: `git checkout -b minha-atualização`
 2. Altere, rode `npm run lint` e `npm run build`
-3. Commit: `git commit -m "feat: descrição"`
+3. Commit: `git commit -m "nova versão: descrição"`
 4. `git push` e abra um Pull Request
 
